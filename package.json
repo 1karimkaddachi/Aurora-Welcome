@@ -1,0 +1,34 @@
+{
+  "name": "aurora-welcome",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Aurora Welcome — production-grade Discord welcome system with a premium dashboard, Components V2, canvas images and invite tracking.",
+  "main": "src/index.js",
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "scripts": {
+    "start": "node --disable-warning=ExperimentalWarning src/index.js",
+    "dev": "node --disable-warning=ExperimentalWarning --watch src/index.js",
+    "build": "vite build --config web/vite.config.js",
+    "deploy-commands": "node --disable-warning=ExperimentalWarning scripts/deploy-commands.js",
+    "seed:dev": "node --disable-warning=ExperimentalWarning scripts/seed-dev.js",
+    "test": "node --disable-warning=ExperimentalWarning --test tests/*.test.js"
+  },
+  "dependencies": {
+    "@napi-rs/canvas": "0.1.80",
+    "discord.js": "14.28.0",
+    "dotenv": "16.4.7",
+    "express": "^4.22.3",
+    "multer": "^2.5.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "4.4.1",
+    "lucide-react": "0.513.0",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "react-router-dom": "7.6.2",
+    "vite": "6.3.5"
+  }
+}
